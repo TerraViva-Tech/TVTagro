@@ -1,35 +1,35 @@
-/*RESET BASICO*/
-*{
+/* RESET BASICO */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*variaveis css*/
-:root{
-    --color-font1:#2E7D32;
-    --color-font2:#0277BD;
-    --color-font3:#757575;
-    --color-font4:rgb(4,25,32);
-    --gradient:linear-gradient(to top, rgba(0,0,0,0.6),rgba(0,0,0,0.3));
-    --font-size:4rem;
+
+/* VARIÁVEIS CSS */
+:root {
+    --color-font1: #2E7D32;
+    --color-font2: #0277BD;
+    --color-font3: #757575;
+    --color-font4: rgb(4, 25, 32);
+    --gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    --font-size: 4rem;
 }
 
-html{
-    /*calculo para converter o tamanho da fonte em 10px*/
+/* BASE */
+html {
     font-size: 62.5%;
-    /*efeito de suavidade*/
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background: transparent;
 }
 
-nav ul{
+nav ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--color-font1);
     font-weight: 900;
@@ -38,49 +38,52 @@ a{
     text-transform: uppercase;
 }
 
-a:hover{
-    color:var(--color-font3)
+a:hover {
+    color: var(--color-font3);
 }
 
-.hero{
+.hero {
     width: 100%;
     min-height: 100vh;
     padding: 3rem;
-    background-image: var(--gradient),url(../assets/lavoura\ imundada.webp);
+    background-image: var(--gradient), url(../assets/imundada.webp);
     background-repeat: no-repeat;
-    background-size:cover ;
+    background-size: cover;
     color: var(--color-font1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header h1{
+header h1 {
     font-size: var(--font-size);
     position: relative;
 }
-.header-menu{
+
+.header-menu {
     display: flex;
     gap: 20px;
 }
-span{
+
+span {
     color: var(--color-font3);
 }
 
-/*Menu Hamburguer*/
-.hamburguer{
+/* MENU HAMBÚRGUER */
+.hamburguer {
     cursor: pointer;
     position: relative;
     z-index: 2;
     display: none;
 }
-.barra{
+
+.barra {
     display: block;
     width: 3rem;
     height: .3rem;
@@ -90,12 +93,80 @@ span{
     transition: .5s;
 }
 
+/* SLIDESHOW */
+.slideshow-container {
+    position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
 
-/*responsividade*/
+.slide {
+  display: none;
+  position: relative;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
 
-@media(width <=1024px){
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+}
 
-    .header-menu{
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+
+.text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.8rem;
+    max-width: 80%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    user-select: none;
+    z-index: 2;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+/* RESPONSIVIDADE */
+@media(width <= 1024px) {
+    .header-menu {
         width: 100%;
         height: 100vh;
         background: var(--gradient);
@@ -106,24 +177,30 @@ span{
         gap: 6rem;
         flex-direction: column;
         justify-content: center;
-        transition: 5s;
+        transition: 0.5s;
     }
-    #titulo{
+
+    #titulo {
         font-size: 2rem;
     }
-    .active{
+
+    .active {
         left: 0;
     }
-    .hamburguer{
+
+    .hamburguer {
         display: block;
     }
-    .hamburguer.active .barra:first-child{
-        transform: translateY(8px) rotate(360deg) rotate(45deg);
+
+    .hamburguer.active .barra:first-child {
+        transform: translateY(8px) rotate(45deg);
     }
-    .hamburguer.active .barra:nth-child(2){
+
+    .hamburguer.active .barra:nth-child(2) {
         opacity: 0;
     }
-    .hamburguer.active .barra:last-child{
-        transform: translateY(-8px) rotate(-360deg) rotate(-45deg);
+
+    .hamburguer.active .barra:last-child {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
