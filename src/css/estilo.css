@@ -42,37 +42,74 @@ a:hover {
     color: var(--color-font3);
 }
 
-.hero {
-    width: 100%;
-    min-height: 100vh;
-    padding: 3rem;
-    background-image: var(--gradient), url(../assets/imundada.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: var(--color-font1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+span {
+    color: var(--color-font3);
 }
 
+/* HEADER MODERNO */
 header {
+    width: 100%;
+    background-color: var(--color-font4);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
 }
 
 header h1 {
     font-size: var(--font-size);
-    position: relative;
+    color: white;
 }
 
 .header-menu {
     display: flex;
-    gap: 20px;
+    gap: 3rem;
 }
 
-span {
-    color: var(--color-font3);
+.header-menu ul {
+    display: flex;
+    gap: 3rem;
+}
+
+.header-menu li a {
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+.header-menu li a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+.header-menu li a:hover::after {
+    width: 100%;
 }
 
 /* MENU HAMBÚRGUER */
@@ -87,26 +124,40 @@ span {
     display: block;
     width: 3rem;
     height: .3rem;
-    background: var(--color-font1);
+    background: white;
     margin: .5rem auto;
     border-radius: 5px;
     transition: .5s;
 }
 
+/* HERO SECTION */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem;
+    background-image: var(--gradient), url(../assets/imundada.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-font1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /* SLIDESHOW */
 .slideshow-container {
     position: relative;
-  max-width: 100%;
-  margin: auto;
-  overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
 }
 
 .slide {
-  display: none;
-  position: relative;
-  text-align: center;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0;
+    display: none;
+    position: relative;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
 }
 
 .slide img {
@@ -118,10 +169,9 @@ span {
 }
 
 .slide.active {
-  display: block;
-  opacity: 1;
+    display: block;
+    opacity: 1;
 }
-
 
 .text {
     position: absolute;
@@ -161,7 +211,6 @@ span {
 
 .next {
     right: 10px;
-    border-radius: 3px 0 0 3px;
 }
 
 /* RESPONSIVIDADE */
@@ -203,4 +252,76 @@ span {
     .hamburguer.active .barra:last-child {
         transform: translateY(-8px) rotate(-45deg);
     }
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: var(--color-font4);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.6rem;
+    margin-top: 4rem;
+}
+
+
+/*estilizando cadastro*/
+.formulario-cadastro {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.formulario-cadastro h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-font1);
+}
+
+.formulario-cadastro label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.formulario-cadastro input,
+.formulario-cadastro textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.formulario-cadastro button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario-cadastro button:hover {
+  background-color: var(--color-font1);
+}
+
+#mensagemStatus {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: green;
 }
