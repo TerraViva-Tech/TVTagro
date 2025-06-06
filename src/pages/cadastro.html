@@ -2,42 +2,51 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - TVTagro</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terra Viva Tech</title>
+  <link rel="icon" href="./src/assets/icon_transparente.png" />
+  <link rel="stylesheet" href="../css/estilo.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="image-side"></div>
-    <div class="form-side">
-      <h2>Bem vindo a TVTagro</h2>
-      <div class="buttons">
-        <button class="login-btn">Login</button>
-        <button class="register-btn">Register</button>
-      </div>
-      <p>Que bom te ter de volta! vamos fazer a mudança por um mundo mais AgroTech!</p>
-
-      <div class="form-group">
-        <label for="username">User name</label>
-        <input type="text" id="username" placeholder="Enter your User name"/>
-      </div>
-
-      <div class="form-group password">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your Password"/>
-        <span class="password-icon" id="togglePassword">👁️</span>
-      </div>
-
-      <div class="extra">
-        <label><input type="checkbox"/> Remember me</label>
-        <a href="#">Forgot Password ?</a>
-      </div>
-
-      <button class="submit-btn">Login</button>
+  <section class="hero">
+<header>
+  <div class="header-content">
+    <div class="logo-container">
+      <img src="../assets/icon_transparente.png" alt="Logo TerraVivaTech" class="logo" />
+      <h1><span>TerraViva</span>Tech</h1>
     </div>
-  </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <nav class="header-menu">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="./src/pages/quiz.html">Quiz</a></li>
+        <li><a href="./src/pages/cadastro.html">Cadastro</a></li>
+        <li><a href="./src/pages/infos.html">Informações</a></li>
+      </ul>
+    </nav>
+
+    <div class="hamburguer">
+      <span class="barra"></span>
+      <span class="barra"></span>
+      <span class="barra"></span>
+    </div>
+    
+    <div class="formulario-cadastro">
+  <h2>Faca o cadastro para receber notificaoes sobre as areas de risco</h2>
+  <form id="cadastroForm">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mensagem">CEP:</label>
+    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+    <button type="submit">Cadastre-se</button>
+  </form>
+  <p id="mensagemStatus"></p>
+</div>
+
+  </div>
+</header>
