@@ -359,3 +359,21 @@ img {
   font-weight: bold;
   font-size: 0.95rem;
 }
+/* RODAPÉ */
+footer {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+footer .social {
+  margin-top: 10px;
+}
+
+footer .social a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
