@@ -1,18 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
- // Hamburguer menu
-const hamburguer = document.querySelector('.hamburguer');
-const headerMenu = document.querySelector('.header-menu');
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburguer = document.getElementById('hamburguer');
+  const navMenu = document.getElementById('nav-menu');
 
-function toggleMenu() {
-  hamburguer.classList.toggle('active');
-  headerMenu.classList.toggle('active');
-}
+  hamburguer.addEventListener('click', () => {
+    navMenu.classList.toggle('ativo');
+    hamburguer.classList.toggle('ativo');
+  });
 
-hamburguer.addEventListener('click', toggleMenu);
-headerMenu.addEventListener('click', (e) => {
-  if (e.target.classList.contains('item-menu')) {
-    toggleMenu();
-  }
+  // Detecta qual link está ativo com base no caminho
+  const links = document.querySelectorAll('.header-menu a');
+  const currentPage = window.location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    const href = link.getAttribute('href').split('/').pop();
+    if (href === currentPage) {
+      link.classList.add('active');
+    }
+  });
 });
 
 // SLIDESHOW
@@ -51,4 +55,4 @@ nextBtn.addEventListener("click", () => plusSlides(1));
 // Iniciar o slideshow
 showSlide(slideIndex);
 setInterval(autoPlaySlides, 5000); // Troca a cada 5 segundos
-});
+
