@@ -2,74 +2,99 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terra Viva Tech</title>
-  <link rel="icon" href="./src/assets/icon_transparente.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TVTagro - Início</title>
   <link rel="stylesheet" href="./src/css/estilo.css" />
 </head>
 <body>
-  <section class="hero">
-<header>
-  <div class="header-content">
-    <div class="logo-container">
-      <img src="./src/assets/icon_transparente.png" alt="Logo TerraVivaTech" class="logo" />
-      <h1><span>TerraViva</span>Tech</h1>
-    </div>
 
-    <nav class="header-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="./src/pages/quiz.html">Quiz</a></li>
-        <li><a href="./src/pages/cadastro.html">Cadastro</a></li>
-        <li><a href="./src/pages/infos.html">Informações</a></li>
+  <!-- HEADER / BANNER -->
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">TVTagro</div>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./src/pages/infos.html">Notícias</a></li>
+        <li><a href="./src/pages/Quiz.html">Quiz</a></li>
+        <li><a href="./src/pages/cadastro.html"></a>Cadastro</li>
       </ul>
     </nav>
-
-    <div class="hamburguer">
-      <span class="barra"></span>
-      <span class="barra"></span>
-      <span class="barra"></span>
+    <div class="hero-content">
+      <h1>Transforme o agro com AgroTech</h1>
+      <p>Descubra como a TVTagro une tecnologia e campo para inovar na agricultura.</p>
+      <div class="btn-group">
+        <a href="login.html" class="btn">Login</a>
+        <a href="register.html" class="btn secondary">Registrar</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-
-
-    <!-- SLIDESHOW -->
-    <div class="slideshow-container">
-      <div class="slide active">
-        <!-- trocar imagens -->
-        <img src="./src/assets/problema.webp" alt="Slide 1" />
-        <!-- Adicionar texto das imagens -->
-        <div class="text">Monitoramento de enchentes em tempo real</div>
-      </div>
-
-      <div class="slide">
-         <!-- trocar imagens -->
-        <img src="./src/assets/imagem slide1.jpg" alt="Slide 2" />
-          <!-- Adicionar texto das imagens -->
-        <div class="text">Dados climáticos integrados ao agronegócio</div>
-      </div>
-
-      <div class="slide">
-         <!-- trocar imagens -->
-        <img src="./src/assets/icon_transparente.png" alt="Slide 3" />
-          <!-- Adicionar texto das imagens -->
-        <div class="text">Soluções práticas para produtores rurais</div>
-      </div>
-      <!-- botao para passar slides  -->
-      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-      <button class="next" onclick="plusSlides(1)">&#10095;</button>
-    </div>
-
-    <h2 id="titulo">Tecnologia contra as águas, <span>a favor do agro</span></h2>
+  <!-- INTRO -->
+  <section class="intro">
+    <p>Você quer entender de forma rápida e simples como a tecnologia pode impulsionar o campo? Conheça nossas soluções e cases de sucesso!</p>
   </section>
-<footer>
-  <p>&copy; 2025 TerraVivaTech. Todos os direitos reservados.</p>
-</footer>
 
+  <!-- CARDS: O que fazemos -->
+  <section class="cards">
+    <div class="card">
+      <h3>Conexão no campo</h3>
+      <p>Levamos internet e sensores 4.0 para áreas rurais remotas.</p>
+    </div>
+    <div class="card">
+      <h3>Conteúdo educativo</h3>
+      <p>Oferecemos vídeos, artigos e conteúdos práticos para produtores.</p>
+    </div>
+    <div class="card">
+      <h3>Resultados reais</h3>
+      <p>Apresentamos cases que mostraram ganhos de produtividade reais.</p>
+    </div>
+  </section>
 
-  <!-- JavaScript externo -->
-  <script src="./src/js/script.js"></script>
+  <!-- SOBRE / O que é a TVTagro -->
+  <section class="sobre">
+    <h2>O que é a TVTagro?</h2>
+    <div class="sobre-grid">
+      <div class="sobre-item">
+        <!--Colocar imagem-->
+        <img src="" alt="Aplicação no campo">
+        <p>Aplicação prática de tecnologias no agronegócio diário.</p>
+      </div>
+      <div class="sobre-item">
+        <!--Colocar imagem-->
+        <img src="" alt="Tecnologia">
+        <p>Uso de drones, IoT, sensores e automação na lavoura.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTAQUE / Missão Verde -->
+  <section class="destaque">
+    <div class="destaque-texto">
+      <h2>Missão Verde</h2>
+      <p>Contribuir para um agro mais sustentável e conectado, democratizando o acesso à tecnologia no campo.</p>
+    </div>
+    <!--Colocar imagem-->
+    <img src="" alt="Colheita no campo">
+  </section>
+
+  <!-- AGRICULTURA + TECNOLOGIA -->
+  <section class="tecnologia">
+    <h2>Agricultura + Tecnologia</h2>
+    <div class="tecnologia-content">
+      <!--Colocar imagem-->
+      <img src="" alt="Plantação tecnológica">
+      <p>Conectividade e inteligência em regiões rurais. Parceiros do futuro do agro.</p>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>© 2025 TVTagro - Todos os direitos reservados</p>
+    <div class="social">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
 </body>
 </html>
