@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terra Viva Tech</title>
-  <link rel="icon" href="./src/assets/icon_transparente.png" />
-  <link rel="stylesheet" href="../css/cadastro.css" />
+  <link rel="icon" href="../assets/icon_transparente.png" />
+  <link rel="stylesheet" href="../css/infos.css" />
 </head>
 <body>
+
+  <!-- HEADER FIXO -->
   <header class="main-header">
     <div class="header-content">
       <div class="logo-container">
@@ -16,12 +18,12 @@
       </div>
 
       <nav class="header-menu" id="nav-menu">
-        <ul>
+         <ul>
           <li><a href="../../index.html">Home</a></li>
-          <li><a href="./src/pages/quiz.html">Quiz</a></li>
-          <li><a href="./src/pages/cadastro.html">Cadastro</a></li>
-          <li><a href="./src/pages/infos.html">Informações</a></li>
-          <li><a href="./src/pages/monitoramento.html">Monitoramento</a></li>
+          <li><a href="./infos.html">Noticias</a></li>
+          <li><a href="./Quiz.html">Quiz</a></li>
+          <li><a href="./cadastro.html">Cadastro</a></li>
+          <li><a href="./monitoramento.html">Monitoramento</a></li>
         </ul>
       </nav>
 
@@ -33,5 +35,74 @@
     </div>
   </header>
 
+  <!-- SEÇÃO HERO / CARROSSEL -->
+  <section class="hero">
+  <div class="hero-text">
+    <h1>TVT Info</h1>
+    <p>Acompanhe as novidades da TVTagro e fique por dentro do que estamos desenvolvendo para transformar a vida no campo e nas cidades com tecnologia e sustentabilidade.</p>
+    <button onclick="scrollToNews()">Veja as notícias</button>
+  </div>
+  <div class="hero-image">
+    <img id="carousel-img" src="../assets/infos1.jpg" alt="Carrossel">
+  </div>
+</section>
 
-           
+  <!-- TÓPICOS -->
+  <section class="topics">
+    <div class="topics-grid">
+      <button onclick="alert('Plantação')" class="topic-btn">
+        <img src="../assets/infos2.jpg" alt="Plantação">
+        <span>plantação</span>
+      </button>
+      <button onclick="alert('Cuidados')" class="topic-btn">
+        <img src="../assets/infos3.jpg" alt="Cuidados">
+        <span>cuidados</span>
+      </button>
+      <button onclick="alert('Tecnologias')" class="topic-btn">
+        <img src="../assets/infos4.jpg" alt="Tecnologias">
+        <span>tecnologias</span>
+      </button>
+      <button onclick="alert('Pecuária')" class="topic-btn">
+        <img src="../assets/infos5.jpg" alt="Pecuária">
+        <span>pecuária</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- NOTÍCIAS -->
+  <section class="news" id="news">
+    <h2 class="news-title">Notícias relacionadas</h2>
+    <div class="news-grid">
+      <div class="card">
+        <img src="../assets/infos6.jpg" alt="Notícia 1">
+        <div class="card-content">
+          <p><strong>Moratória da Soja trava bilhões no campo</strong></p>
+          <p>Produtores do MT alegam prejuízo bilionário enquanto aguardam decisão do STF.</p>
+          <a href="#">ler mais</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../assets/infos7.jpg" alt="Notícia 2">
+        <div class="card-content">
+          <p><strong>Boi gordo tem valores estabilizados</strong></p>
+          <p>Compradores demonstram interesse, mas oferta é restrita.</p>
+          <a href="#">ler mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>© 2025 TVTagro - Todos os direitos reservados</p>
+    <div class="social">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="../js/infos.js"></script>
+
+</body>
+</html>
