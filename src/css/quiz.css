@@ -1,0 +1,238 @@
+/* HEADER */
+.main-header {
+  background-color: #2e7d32;
+  padding: 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  width: 50px;
+}
+
+.logo-container h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.logo-container span {
+  color: #a5d6a7;
+}
+
+.header-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.header-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header-menu a:hover {
+  color: #c8e6c9;
+}
+
+/* HAMBURGUER */
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburguer .barra {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+}
+
+/* Ícone Hamburguer vira X */
+.hamburguer.ativo .barra:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguer.ativo .barra:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer.ativo .barra:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Estilo para o link ativo */
+.header-menu a.active {
+  color: #ffffff;
+  background-color: #388e3c;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .header-menu {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #2e7d32;
+    opacity: 0;
+    transform: translateY(-30px);
+    pointer-events: none;
+  }
+
+  .header-menu.ativo {
+    display: flex;
+    animation: slideDown 0.5s ease forwards;
+    pointer-events: auto;
+  }
+
+  .header-menu ul {
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 15px;
+    align-items: center;
+    margin: 0;
+  }
+   @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+ 
+
+.header-menu.animando-saida {
+  animation: slideUp 0.5s ease forwards;
+}
+
+  .hamburguer {
+    display: flex;
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.quiz-container {
+  max-width: 800px;
+  margin: 80px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2e7d32;
+}
+
+.pergunta {
+  margin-bottom: 20px;
+}
+
+.pergunta h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.pergunta label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+#verResultado {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+#verResultado:hover {
+  background-color: #388e3c;
+}
+
+#resultadoFinal {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+label.opcao.correta {
+  background-color: #c8e6c9;
+  border-left: 4px solid #2e7d32;
+  padding-left: 8px;
+  border-radius: 4px;
+}
+
+label.opcao.errada {
+  background-color: #ffcdd2;
+  border-left: 4px solid #d32f2f;
+  padding-left: 8px;
+  border-radius: 4px;
+}
+
+/* RODAPÉ */
+footer {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+footer .social {
+  margin-top: 10px;
+}
+
+footer .social a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
